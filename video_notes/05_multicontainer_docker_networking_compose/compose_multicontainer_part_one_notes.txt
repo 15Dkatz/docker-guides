@@ -1,0 +1,8 @@
+-- Custom Networks, Compose another Multicontainer Application - Part One --
+
+We have started building another multi-container application in the hope of creating a private network setup between some of our services. This multi-container app will eventually have a postgresql, node.js, express.js, and php container.
+
+So far, we have built the postgresql container. Note that we can set up database data by sending sql scripts to the /docker-entrypoint-initdb.d/ directory of the postgresql container.
+
+Here’s the completed project code. Note that we have only completed postgresql so far, but the code for the project has all the code for the next parts as well. Explanations for the node, flask, and php setup will follow:
+https://github.com/15Dkatz/docker-guides/tree/master/compose-networks

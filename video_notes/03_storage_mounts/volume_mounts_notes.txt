@@ -1,0 +1,10 @@
+-- Volume Mounts --
+
+Volume mounts allow us to create a special directory managed by Docker that allows us to share data across containers. Containers can write to the volume, and have that data persist even after the container is stopped or removed. Below are some of the main commands we used while exploring volume mounts:
+
+Create and inspect a volume:
+- `docker volume create shared-vol`
+- `docker volume inspect shared-vol`
+
+Run a container with the mount. Note that the source is the name of the volume, and the target is the container directory where the mount’s volumes should populate. Writing to this container directory and editing its contents will update the original volume directory:
+`docker run -it --name=foo --mount source=shared-vol,target=/src/shared`

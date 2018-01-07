@@ -1,0 +1,7 @@
+-- Bind Mounts --
+
+Bind mounts allow us to connect a directory on the Docker host machine to one in the container. This allows us to give the container new files and update the bound directory on the fly. This is useful for projects that have a working directory where configuration files continually update. However, a bind mount has a more fragile setup, since the mounted host directory can always change or disappear.
+
+Run a container with a bind mount:
+`docker run -it --name=foo --mount source=shared-vol,target=/src/shared ubuntu bash`
+

@@ -1,0 +1,18 @@
+-- Install Docker on Ec2 Instances --
+
+After getting access to the ec2 instance, we need to install docker and start the docker daemon.
+
+Here are the steps to install docker on the ec2 instance:
+- `sudo yum install -y docker`
+- `sudo service docker start`
+- `sudo usermod -G docker ec2-user`
+- Re-connect to the instance.
+ - Try `docker` and `docker container ls`
+
+Note that we also wrote a convenient bash script to quickly connect to our various instances with one command. For example, to connect to the first instance:
+- `./cswarm.sh 1`
+Or the second:
+- `./cswarm.sh 2`
+
+Here’s the script (substitute the ip addresses for the ones of your instances):
+https://github.com/15Dkatz/docker-guides/blob/master/swarm/cswarm.sh

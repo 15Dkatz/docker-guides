@@ -1,0 +1,13 @@
+-- Run a Ubuntu Container Continued --
+
+Containers can be created, run, started and attached to with one step using `docker run.` We should also remove containers when we finish using them. Below are the main commands we went over:
+
+Create, start, run, and attach to a container in one step:
+- `docker run --name=bar -it ubuntu bash`
+
+Stop a container:
+- `docker stop foo`
+Remove a container:
+- `docker rm foo`
+Force remove a container (stop and remove in one step):
+- `docker rm -f foo`

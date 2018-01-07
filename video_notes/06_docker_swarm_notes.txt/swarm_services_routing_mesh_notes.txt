@@ -1,0 +1,22 @@
+-- Docker Swarm - Scale Services and Explore the Routing Mesh --
+
+We created our first docker swarm, and explored its various features such as the routing mesh. First, we initialized a swarm in our first ec2 instance. And then in our other two instances, we joined that swarm as worker nodes.
+
+To initialize the swarm:
+- Go to the first ec2 instance
+-  Run `ifconfig` and make a note of the ip address under `eth0`
+- `docker swarm init --advertise-addr=<ip address>`, something like:
+`docker swarm init --advertise-addr=172.31.17.31`
+- make a note of the printed `docker swarm join…` command, as this will be run in other instances to join the swarm as workers.
+
+In the other instances, join the swarm as workers with the copied command from the step above. Something like:
+`docker swarm join --token SWMTKN-1-592fo0c31guwi9cw58jpq9do1o5jzyw5fzbk9dwiw8bm4xxpad-94vn587o9o3r73h3e5esujxm9 172.31.17.31:2377`
+
+Back in the manager node (the first ec2 instance):
+- List the nodes in the swarm: `docker node ls`
+- `docker network ls`
+- `docker network inspect ingress` (Note the “Peers” section)
+- Start a service: `docker service create --name=site --publish=80:80 nginx`
+- Visit the public ip address of any of the ec2 instances to see the routing mesh in action.
+- Create replicas of the running nginx container across the swarm:
+`docker service update --replicas 6 site`

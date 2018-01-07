@@ -1,0 +1,7 @@
+-- Tmpfs Mounts --
+
+Tmpfs mounts allow us to have a temporary storage solution for Docker containers. This allows us to write files during the lifetime of a container without having that data persist. Why is this useful? If the container generates sensitive information like secret files or private keys, by using a tmpfs mount, we can ensure that the data disappears once the container completes its course.
+
+Run a container, in detached mode, with a tmpfs mount. The destination represents the directory where the container can write the secret data that should disappear:
+`docker run -dit --name=baz --mount type=tmpfs,destination=/tmpdir ubuntu bash`
+

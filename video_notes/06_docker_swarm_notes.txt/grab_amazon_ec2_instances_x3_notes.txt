@@ -1,0 +1,21 @@
+-- Grab an Amazon EC2 Cloud Linux Instance (x3) --
+
+As a result of this video, we have three amazon ec2 linux instances that we can turn into nodes for a docker swarm cluster. Essentially, we’ll soon install docker on all three systems, and then group them together. This “grouping” will create a swarm, which allows us to pool each of three machine’s docker engines to balance the load for running services and applications.
+
+Here are the steps we took to create each ec2 instance, and prepare it for becoming a node in a docker swarm:
+- Get an AWS account.
+- Go to `Instances` on the sidebar.
+- Launch an instance. Select `AWS Linux` (the first option usually)
+- Select `t2.micro` (free tier eligible)
+- Click `Edit security groups`
+- Add the following rules, accepting all connections: SSH port 22, HTTP port, 80, TCP port 2377, UDP port 4789, and TCP+UDP on 7946.
+- Click `launch`
+- Create a new key pair and name it something similar to `swarm-nodes`. Download the .pem file.
+- Click `launch`
+- Make the .pem file private: `chmod 400 swarm-nodes.pem`
+- Go to the instances, and look at the instance description (click on its checkbox to open the description). Make a note of the `public ipv4 address`.
+- Finally, ssh into the instance (Make sure you’re in the directory where swarm-nodes.pem is located):
+`ssh -i swarm-nodes.pem ec2-user@<public ipv4 address>`. 
+Should look something like `ssh -i `swarm-nodes.pem ec2-user@192.10.0.31`
+
+If all goes well, you’re now running a shell within the ec2 instance.

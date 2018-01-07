@@ -1,0 +1,14 @@
+-- Build an express.js Image --
+
+We built a new image, using express.js to build a containerized web server. Here is the project we created:
+
+https://github.com/15Dkatz/docker-guides/tree/master/express
+After cloning the repository, build and run the container, and view it:
+- `docker build . -t docker/express`
+- `docker run --name=express -d -p 3002:80 docker/express`
+- Go to http://localhost:3002
+
+While building the express container, we covered a few important concepts. Here are some extra notes:
+- In order to make the container accessible, we hosted it on ‘0.0.0.0’, allow external connections.
+- We also used the recommended exec form for the CMD option of the Dockerfile:
+	CMD [“node”, “server.js”]

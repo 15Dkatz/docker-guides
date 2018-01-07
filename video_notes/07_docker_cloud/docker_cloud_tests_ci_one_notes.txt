@@ -1,0 +1,10 @@
+-- Docker Cloud Tests and Continuous Integration - Part One --
+
+With Docker Cloud, we can create a continuous integration workflow that automatically tests the container repository when new code is introduced. By setting up tests that run every time a pull request occurs, we can integrate code as it passes our all-encompassing tests for the project.
+
+So far, we have created a `sitetest.sh` file for the serve project. It passes or fails depending on whether or not a running `serve` container has a `site/` directory. Check it out:
+https://github.com/15Dkatz/docker-guides/blob/master/serve/tests/sitetest.sh
+
+Once you have the file locally, make sure that you also have a container called `serve` running with the `serve` image from the `serve` project. Then run the test.
+
+Next up, we’ll add this file to github. Then we’ll configure the test with Docker Cloud and Github, to run every time a pull request opens for the project.

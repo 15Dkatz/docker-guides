@@ -1,0 +1,14 @@
+We now have a continuous integration workflow with Docker Cloud and Github. With this setup, we have configured automatic tests to run every time a pull request opens for our `serve` project on Github.
+
+To configure this automatic testing environment, we created a docker-compose.test.yml file. This docker-compose.test.yml file contains a special service called `sut` (system under test) which is a testing container that runs a test script. This script exits with either a 0 (pass) or 1 (fail) to notify docker of whether or not the tests have passed.
+
+In this project directory, there is a completed docker-compose.test.yml file, as well as a relevant tests/ directory for the testing container:
+
+
+Finally, to set up the automatic testing, head to Docker Cloud:
+https://github.com/15Dkatz/docker-guides/tree/master/serve
+
+- Go to the `configure build` option for your desired project.
+- Turn on `automatic testing`
+- Open a couple pull requests, and watch the automatic tests run.
+

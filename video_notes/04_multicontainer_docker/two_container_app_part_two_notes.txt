@@ -1,0 +1,11 @@
+-- Compose a Two-Container App - Part Two --
+
+We completed our first multi-container application with Docker Compose. After building the node container first, we added the php container next.
+
+Here is the completed project:
+https://github.com/15Dkatz/docker-guides/tree/master/node-php
+
+After cloning the project, run:
+`docker-compose up`
+If you need to update an image, launch docker-compose using the `--build` option:
+`docker-compose up --build`

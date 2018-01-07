@@ -1,0 +1,9 @@
+-- Automatic Image Builds with Github and Docker Cloud --
+
+We set up the ability to automatically build images with changes to an accompanying git repository for our Docker Cloud repositories. Essentially we connected the github repo for our projects with Dockerfiles to our Docker Cloud repositories images hosting the images. With this link now, whenever we update our github repo with a change, a new image build gets triggered within Docker Cloud.
+
+Directions to set up automatic Docker Cloud image builds:
+- Link your Github account to your Docker Cloud account.
+- Click the `build configurations` button on docker cloud for your desired repo.
+- Go to the builds section, and make a rule for the ‘master’ (chosen by default) branch of your linked github repo.
+- Observe an automatic build by making a change to your project, and committing the change to github.

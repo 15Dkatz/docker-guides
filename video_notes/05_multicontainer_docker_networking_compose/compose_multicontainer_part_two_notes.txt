@@ -1,0 +1,7 @@
+-- Custom Networks, Compose another Multicontainer Application - Part Two -- 
+
+We have added two more containers to our biggest multi-container application yet. This time we added node.js, and flask containers to the project. Note that the flask container serves as an extension of the node.js container, adding more information to the core data being served.
+
+Here’s the completed project. Note that we still haven’t created the php container, nor the private network set up. But the completed project has that code. Explanations for the php and networking parts coming up:
+https://github.com/15Dkatz/docker-guides/tree/master/compose-networks
+

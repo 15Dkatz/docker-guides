@@ -1,0 +1,12 @@
+-- Build a File Server Image --
+
+We build our first Docker image with a custom Dockerfile. This image used serve.js, a node.js module used to serve file directories, and static html pages. Below are the steps we used to create the serve image.
+
+- Create a `serve` directory with an inner `display` directory.
+- Place contents to be served into the `display` directory.
+- Create a Dockerfile at the root of the project with the following content:
+https://github.com/15Dkatz/docker-guides/blob/master/serve/Dockerfile
+- Build the image: `docker build . -t docker/serve`
+- Run a container with the image, and map the host’s 3001 port to the container’s 5000 port: 
+`docker run --name=serve -p=3001:5000 docker/serve`
+- visit http://localhost:5000 in a browser.

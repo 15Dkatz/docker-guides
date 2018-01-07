@@ -1,0 +1,8 @@
+-- Host Docker Images with Docker Cloud --
+
+We explored hosting docker images with Docker Cloud. We’ve created quite a few of our own custom Docker images with Dockerfiles, and now we have the power to make them available for public use with Docker Cloud. Below are the main commands we used for image hosting:
+
+- Log in to your docker cloud account: `docker login`
+- Build an image to host. For example, the serve project: `docker build . -t docker/serve`
+- Push it to docker cloud: `docker push docker/serve`
+

@@ -1,0 +1,6 @@
+-- Compose a Two-Container App - Part One --
+
+We started building our first multi-container application with Docker Compose, with a node container first of all, and soon, a php container. In this video, we set up the Node side of the project. We also created a docker-compose.yml file in order to configure the project.
+
+Here’s the completed project. Note that we haven’t done the php portion of the project yet, which we’ll go through in the next video:
+https://github.com/15Dkatz/docker-guides/tree/master/node-php

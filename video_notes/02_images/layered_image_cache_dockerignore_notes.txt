@@ -1,0 +1,7 @@
+-- Layered Image Cache and the .dockerignore file --
+
+We went over the layered image cache and the .dockerignore file.
+
+The layered image cache with Docker helps optimize the build process. By caching each phase in the image build, Docker only reruns steps that have actually changed upon subsequent builds.
+
+With the .dockerignore file, we can tell Docker to skip over certain files when copying over the files needed to create images for containers. This is useful when we have large directories like a .git/ or node_modules/ folder that we don’t want to send to the container’s file system.
