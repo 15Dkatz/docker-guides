@@ -11,5 +11,5 @@ Ubuntu:
 - Download the docker install script: `wget -qO- https://get.docker.com/ | sh`
 - `sudo usermod -aG docker $(whoami)`
 - Restart operating system.
-- Try: `docker` and `docker contaienr ls`
+- Try: `docker` and `docker container ls`
 
