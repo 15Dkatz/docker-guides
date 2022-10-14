@@ -1,7 +1,7 @@
 FROM node
-WORKDIR app
+WORKDIR /app
 RUN npm install -g nodemon
-COPY package.json .
+COPY package.json package.json
 RUN npm install
 RUN mv /app/node_modules /node_modules
 COPY . .

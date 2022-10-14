@@ -1,3 +1,4 @@
-README.md
-node_modules/
 .git/
+node_modules/
+package-lock.json
+README.md

@@ -1,9 +1,11 @@
 <html>
   <body>
-    <h1>Team names:</h1>
+    <h1>Team:</h1>
     <ul>
       <?php
-        foreach(json_decode(file_get_contents('http://players'))->players as $player) {
+        $json = file_get_contents('http://players/');
+        $players = json_decode($json)->players;
+        foreach ($players as $player) {
           echo "<li>$player</li>";
         }
       ?>

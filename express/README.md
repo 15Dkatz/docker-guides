@@ -1,1 +1,1 @@
-An express.js Docker container
+An express container in Docker

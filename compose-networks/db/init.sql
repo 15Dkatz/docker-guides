@@ -5,5 +5,5 @@ CREATE TABLE apparel(
 INSERT INTO apparel(name)
 VALUES
 ('Helmet'),
-('Gauntlets'),
+('Gauntlet'),
 ('Boots');
