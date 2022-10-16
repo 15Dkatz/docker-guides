@@ -1,0 +1,10 @@
+-- Volumes - Update Compose Containers Dynamically --
+
+In this lesson, we use volumes to dynamically update our compose application.
+Previously, we used volumes in order share data across containers in a specific Docker-managed directory.
+With Docker Compose though, we can use volumes in a different way.
+This time, we connect specific directories on the host machine to ones in our container services.
+With the volumes for our node and php services set up, we gain the ability to dynamic update our compose application as we save and edite files in the application.
+
+Here’s the completed project:
+https://github.com/15Dkatz/docker-guides/tree/master/node-php-volumes

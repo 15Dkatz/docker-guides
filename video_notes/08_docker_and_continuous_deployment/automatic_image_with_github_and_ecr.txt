@@ -1,0 +1,9 @@
+-- Automatic Image Builds with Github and Amazon ECR --
+
+In this video, we connect a few tools: an amazon ECR private container repository, a github repository, and a Github Actions workflow.
+
+1. The Amazon ECR private container repository allows us to store docker images, as large files, where we can have up to 50 GB of free storage monthly.
+2. The github repository is a place to keep track of changes to the container's source code.
+3. The Github Actions workflow sets up a continuous deployment process where a new image is built and deployed to Amazon ECR every time a change is committed to the master branch of the github repository.
+
+We also explore some additional minor concepts related to these tools, such as Github Actions secrets, .gitignore files, and more
