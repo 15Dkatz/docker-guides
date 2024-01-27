@@ -1,4 +1,9 @@
-# Docker - Introducing Docker Essentials, Containers, and more
+# [Docker-Endorsed] Docker - Introducing Docker Essentials, Containers, and more
+
+![Course Logo](docker_endorsed_course.png)
+
+This Course has been endorsed by Docker in partnership with the Udemy Instructor Partner Program.
+
 "Docker - Introducing Docker Essentials, Containers, and more": Official guide repo used to accompany video lessons.
 
 Docker is an open platform that lets you package, develop, run, and ship
